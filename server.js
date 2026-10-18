@@ -4,6 +4,8 @@ import { dirname, join, extname } from "path";
 import { readFile, writeFile, mkdir } from "fs/promises";
 import { existsSync, mkdirSync } from "fs";
 import multer from "multer";
+import { mkdirSync } from 'fs';
+import { join } from 'path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -20,8 +22,7 @@ app.use(express.static(join(__dirname, "public")));
 // --- File uploads (complaint attachments) ---
 // Ensure the uploads directory exists before multer writes to it.
 if (!existsSync(UPLOADS_DIR)) mkdirSync(UPLOADS_DIR, { recursive: true });
-import { mkdirSync } from 'fs';
-import { join } from 'path';
+
 
 const uploadDir = process.env.VERCEL
   ? '/tmp/uploads'
