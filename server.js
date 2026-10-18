@@ -10,7 +10,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const DATA_DIR = join(__dirname, "data");
+// Na Vercelu system plików jest read-only — pisać można tylko do /tmp.
+// Lokalnie zostaje folder "data" w projekcie.
+const DATA_DIR = process.env.VERCEL ? "/tmp/data" : join(__dirname, "data");
 const LEADS_FILE = join(DATA_DIR, "leads.json");
 const COMPLAINTS_FILE = join(DATA_DIR, "complaints.json");
 const UPLOADS_DIR = join(DATA_DIR, "uploads");
@@ -19,15 +21,8 @@ app.use(express.json());
 app.use(express.static(join(__dirname, "public")));
 
 // --- File uploads (complaint attachments) ---
-// Ensure the uploads directory exists before multer writes to it.
+// Upewnij się, że katalogi istnieją, zanim multer/zapisy do nich sięgną.
 if (!existsSync(UPLOADS_DIR)) mkdirSync(UPLOADS_DIR, { recursive: true });
-
-
-const uploadDir = process.env.VERCEL
-  ? '/tmp/uploads'
-  : join(process.cwd(), 'data/uploads');
-
-mkdirSync(uploadDir, { recursive: true });
 
 const ALLOWED_EXT = new Set([
   ".pdf", ".doc", ".docx", ".xls", ".xlsx", ".csv",
