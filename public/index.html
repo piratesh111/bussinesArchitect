@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Architect — AI w codziennej pracy</title>
+    <meta
+      name="description"
+      content="Architektura skutecznej zmiany. Od warsztatu AI do wdrożenia. Program AI enablement i dedykowane rozwiązania dla TSL."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Scroll progress bar -->
+    <div class="progress" id="progress"></div>
+
+    <!-- Navbar -->
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a class="brand" href="#top">
+          <span class="brand__mark">BA</span>
+          <span class="brand__name" data-bind="nav.brand"></span>
+        </a>
+        <nav class="nav__links" id="navLinks"></nav>
+        <div class="lang" id="lang">
+          <button
+            class="lang__btn"
+            data-lang="pl"
+            type="button"
+            aria-label="Polski"
+            title="Polski"
+          >
+            <span class="flag flag--pl" aria-hidden="true"></span>
+          </button>
+          <button
+            class="lang__btn"
+            data-lang="en"
+            type="button"
+            aria-label="English"
+            title="English"
+          >
+            <span class="flag flag--uk" aria-hidden="true"></span>
+          </button>
+        </div>
+        <a
+          class="btn btn--primary nav__cta"
+          href="#contact"
+          data-bind="nav.cta"
+        ></a>
+        <button class="nav__burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero section" id="hero">
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="container hero__content reveal">
+          <p class="kicker" data-bind="hero.kicker"></p>
+          <h1 class="hero__title">
+            <span data-bind="hero.title"></span><br />
+            <span class="muted" data-bind="hero.subtitle"></span>
+          </h1>
+          <p class="hero__lead" data-bind="hero.lead"></p>
+          <div class="hero__actions">
+            <a
+              class="btn btn--primary"
+              href="#contact"
+              data-bind="hero.ctaPrimary"
+            ></a>
+            <a class="btn btn--ghost" href="#workshops"
+              ><span data-bind="hero.ctaSecondary"></span> →</a
+            >
+          </div>
+        </div>
+        <div class="scroll-hint reveal" aria-hidden="true">
+          <span class="scroll-hint__chevron"></span>
+          <span class="scroll-hint__chevron"></span>
+          <span class="scroll-hint__chevron"></span>
+        </div>
+      </section>
+
+      <!-- ENABLEMENT -->
+      <section class="section" id="enablement">
+        <div class="container">
+          <p class="tag reveal" data-bind="enablement.tag"></p>
+          <div class="split">
+            <div class="split__left reveal">
+              <h2 data-bind="enablement.title"></h2>
+              <p class="lead" data-bind="enablement.lead"></p>
+              <a class="btn btn--dark" href="#workshops"
+                ><span data-bind="enablement.cta"></span> →</a
+              >
+            </div>
+            <div class="cards cards--3" id="enablementCards"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORKSHOPS -->
+      <section class="section section--alt" id="workshops">
+        <div class="container">
+          <h2 class="center reveal" data-bind="workshops.title"></h2>
+          <div class="split split--top">
+            <div class="offer card reveal" id="offer"></div>
+            <div class="org reveal" id="org"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATS -->
+      <section class="section stats" id="stats">
+        <div class="container stats__grid" id="statsGrid"></div>
+      </section>
+
+      <!-- TSL -->
+      <section class="section tsl" id="tsl">
+        <div class="tsl__bg" aria-hidden="true"></div>
+        <div class="container tsl__content reveal">
+          <p class="tag tag--light" data-bind="tsl.tag"></p>
+          <h2 data-bind="tsl.title"></h2>
+          <p class="lead" data-bind="tsl.lead"></p>
+          <a class="btn btn--primary" href="#contact" data-bind="tsl.cta"></a>
+          <div class="phases" id="tslPhases"></div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="section" id="process">
+        <div class="container">
+          <h2 class="reveal" data-bind="process.title"></h2>
+          <p class="lead reveal" data-bind="process.subtitle"></p>
+          <div class="cards cards--3" id="processCards"></div>
+          <p class="process__footer reveal" data-bind="process.footer"></p>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section section--alt" id="about">
+        <div class="container">
+          <p class="tag reveal" data-bind="about.tag"></p>
+          <div class="split">
+            <div class="split__left reveal">
+              <h2 data-bind="about.title"></h2>
+            </div>
+            <div class="split__right reveal">
+              <p class="lead" data-bind="about.text"></p>
+              <a class="btn btn--dark" href="#contact"
+                ><span data-bind="about.cta"></span> →</a
+              >
+              <div class="people" id="people"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="section" id="testimonials">
+        <div class="container">
+          <h2 class="reveal" data-bind="testimonials.title"></h2>
+          <div class="cards cards--2" id="testimonialsGrid"></div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section section--dark" id="contact">
+        <div class="container contact">
+          <div class="contact__intro reveal">
+            <h2 data-bind="contact.title"></h2>
+            <p class="lead" data-bind="contact.lead"></p>
+          </div>
+          <form class="contact__form card reveal" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name" data-bind="contact.form.name"></label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="email" data-bind="contact.form.email"></label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="company"
+                ><span data-bind="contact.form.company"></span>
+                <span class="opt" data-bind="contact.form.companyOpt"></span
+              ></label>
+              <input
+                id="company"
+                name="company"
+                type="text"
+                autocomplete="organization"
+              />
+            </div>
+            <div class="field">
+              <label for="message" data-bind="contact.form.message"></label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <button
+              class="btn btn--primary btn--full"
+              type="submit"
+              id="submitBtn"
+              data-bind="contact.cta"
+            ></button>
+            <p class="form__status" id="formStatus" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="brand brand--footer">
+          <span class="brand__mark">BA</span>
+          <span class="brand__name" data-bind="footer.brand"></span>
+        </div>
+        <p class="footer__owner" data-bind="footer.owner"></p>
+        <nav class="footer__links" id="footerLinks"></nav>
+      </div>
+      <div class="container footer__bottom">
+        <span class="footer__copy">© 2026 Business Architect</span>
+        <a class="footer__policy" id="footerPolicy" href="/polityka-prywatnosci"
+          >Polityka prywatności</a
+        >
+      </div>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

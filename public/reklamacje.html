@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reklamacje — Business Architect</title>
+    <meta
+      name="description"
+      content="Reklamacje Business Architect — jak zgłosić zastrzeżenia do realizacji usługi i czego powinno dotyczyć zgłoszenie."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="nav scrolled" id="nav">
+      <div class="nav__inner">
+        <a class="brand" href="/">
+          <span class="brand__mark">BA</span>
+          <span class="brand__name">BUSINESS ARCHITECT</span>
+        </a>
+        <nav class="nav__links">
+          <a href="/#enablement">Co robimy</a>
+          <a href="/#process">Jak pracujemy</a>
+          <a href="/#about">O nas</a>
+        </nav>
+        <div class="lang">
+          <a
+            class="lang__btn is-active"
+            data-lang="pl"
+            href="/reklamacje"
+            aria-label="Polski"
+            title="Polski"
+          >
+            <span class="flag flag--pl" aria-hidden="true"></span>
+          </a>
+          <a
+            class="lang__btn"
+            data-lang="en"
+            href="/complaints"
+            aria-label="English"
+            title="English"
+          >
+            <span class="flag flag--uk" aria-hidden="true"></span>
+          </a>
+        </div>
+        <a class="btn btn--primary nav__cta" href="/#contact"
+          >Porozmawiajmy →</a
+        >
+        <button class="nav__burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="legal complaints">
+      <div class="hero__bg legal__bg" aria-hidden="true"></div>
+      <div class="container">
+        <!-- Breadcrumb -->
+        <nav class="crumb" aria-label="Ścieżka">
+          <a href="/">Strona główna</a>
+          <span>›</span>
+          <span>Reklamacje</span>
+        </nav>
+
+        <!-- Hero -->
+        <header class="cmp-hero">
+          <div class="cmp-hero__text">
+            <p class="kicker">INFORMACJE DLA KLIENTA</p>
+            <h1 class="legal__title">Reklamacje</h1>
+            <p class="cmp-hero__sub">Powiedz nam, co wymaga poprawy.</p>
+            <p class="lead">
+              Jeśli masz zastrzeżenia do realizacji usługi, opisz sytuację i
+              przekaż nam zgłoszenie.
+            </p>
+          </div>
+          <div class="cmp-hero__art" aria-hidden="true">
+            <svg
+              viewBox="0 0 320 240"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect x="40" y="40" width="150" height="150" fill="#e9e3d8" />
+              <path
+                d="M40 190 L120 110 L170 150 L280 50"
+                stroke="#d1552b"
+                stroke-width="2.5"
+                fill="none"
+              />
+              <circle cx="40" cy="190" r="5" fill="#d1552b" />
+              <circle cx="120" cy="110" r="5" fill="#d1552b" />
+              <circle cx="170" cy="150" r="5" fill="#d1552b" />
+              <circle cx="280" cy="50" r="5" fill="#d1552b" />
+              <line
+                x1="40"
+                y1="210"
+                x2="300"
+                y2="210"
+                stroke="#cfc8ba"
+                stroke-width="1.5"
+              />
+              <line
+                x1="40"
+                y1="30"
+                x2="40"
+                y2="210"
+                stroke="#cfc8ba"
+                stroke-width="1.5"
+              />
+            </svg>
+          </div>
+        </header>
+
+        <!-- How to report + rules -->
+        <section class="cmp-grid">
+          <div class="cmp-main">
+            <h2>Jak zgłosić reklamację?</h2>
+            <p>
+              Skorzystaj z formularza poniżej lub danych kontaktowych dostępnych
+              na stronie Kontakt.
+            </p>
+            <a class="link-arrow" href="/#contact">Przejdź do kontaktu ↗</a>
+
+            <h2 class="cmp-mt">Co powinno zawierać zgłoszenie?</h2>
+            <ol class="cmp-steps">
+              <li>
+                <span class="cmp-steps__num">01</span>
+                <div>
+                  <strong>Dane kontaktowe</strong>
+                  <p>
+                    Imię i nazwisko lub nazwa firmy oraz e-mail do odpowiedzi.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="cmp-steps__num">02</span>
+                <div>
+                  <strong>Informacje o usłudze</strong>
+                  <p>Nazwa usługi i termin jej realizacji.</p>
+                </div>
+              </li>
+              <li>
+                <span class="cmp-steps__num">03</span>
+                <div>
+                  <strong>Opis sytuacji</strong>
+                  <p>Co się wydarzyło i czego dotyczą zastrzeżenia.</p>
+                </div>
+              </li>
+              <li>
+                <span class="cmp-steps__num">04</span>
+                <div>
+                  <strong>Oczekiwane rozwiązanie</strong>
+                  <p>Napisz, jakiego sposobu rozwiązania sprawy oczekujesz.</p>
+                </div>
+              </li>
+            </ol>
+            <p class="cmp-note">
+              Możesz dołączyć dokumenty związane ze zgłoszeniem.
+            </p>
+          </div>
+
+          <aside class="cmp-aside">
+            <div class="cmp-card">
+              <h3>Zasady rozpatrywania</h3>
+              <p>
+                Szczegółowe zasady i terminy określa Regulamin reklamacji
+                Business Architect.
+              </p>
+              <a class="btn btn--ghost cmp-card__btn" href="/#contact"
+                >Regulamin reklamacji ↓</a
+              >
+            </div>
+            <div class="cmp-card cmp-card--plain">
+              <h3>Potrzebujesz innej formy kontaktu?</h3>
+              <p>Zgłoś potrzebę dostosowania sposobu komunikacji.</p>
+              <a class="link-arrow" href="/#contact">Dostępność ↗</a>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Timeline -->
+        <section class="cmp-timeline-wrap">
+          <p class="tag">CO DALEJ</p>
+          <h2>Od zgłoszenia do odpowiedzi.</h2>
+          <ol class="cmp-timeline">
+            <li>
+              <span class="cmp-timeline__num">01</span>
+              <span class="cmp-timeline__label">Zgłoszenie</span>
+            </li>
+            <li>
+              <span class="cmp-timeline__num">02</span>
+              <span class="cmp-timeline__label">Potwierdzenie odbioru</span>
+            </li>
+            <li>
+              <span class="cmp-timeline__num">03</span>
+              <span class="cmp-timeline__label">Analiza sprawy</span>
+            </li>
+            <li>
+              <span class="cmp-timeline__num">04</span>
+              <span class="cmp-timeline__label">Odpowiedź i dalsze kroki</span>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Form -->
+        <section class="cmp-form-wrap">
+          <h2>Zgłoś reklamację</h2>
+          <p class="cmp-required-note">Pola oznaczone * są wymagane.</p>
+          <form id="complaintForm" class="cmp-form" novalidate>
+            <div class="cmp-form__row">
+              <div class="field">
+                <label for="name">Imię i nazwisko / firma *</label>
+                <input id="name" name="name" type="text" required />
+              </div>
+              <div class="field">
+                <label for="email">E-mail *</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+            </div>
+            <div class="cmp-form__row">
+              <div class="field">
+                <label for="service">Nazwa usługi *</label>
+                <input id="service" name="service" type="text" required />
+              </div>
+              <div class="field">
+                <label for="dueDate">Termin realizacji</label>
+                <input id="dueDate" name="dueDate" type="text" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="situation">Opis sytuacji *</label>
+              <textarea
+                id="situation"
+                name="situation"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <div class="field">
+              <label for="expected">Oczekiwane rozwiązanie</label>
+              <textarea id="expected" name="expected" rows="3"></textarea>
+            </div>
+            <div class="cmp-form__actions">
+              <label class="btn btn--ghost cmp-attach">
+                📎 Dodaj załącznik
+                <input type="file" id="attachment" hidden multiple />
+              </label>
+              <button class="btn btn--primary" type="submit" id="cmpSubmit">
+                Wyślij zgłoszenie ↗
+              </button>
+            </div>
+            <p class="form__status" id="cmpStatus" role="status"></p>
+            <p class="cmp-privacy">
+              Informacje o przetwarzaniu danych znajdziesz w
+              <a href="/polityka-prywatnosci">Polityce prywatności</a>.
+            </p>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="brand brand--footer">
+          <span class="brand__mark">BA</span>
+          <span class="brand__name">BUSINESS ARCHITECT</span>
+          <span class="footer__tag">Architektura skutecznej zmiany</span>
+        </div>
+        <nav class="footer__links">
+          <a href="/#contact">Kontakt</a>
+          <a href="/reklamacje">Reklamacje</a>
+          <a href="/#contact">Dostępność</a>
+          <a href="/polityka-prywatnosci">Polityka prywatności</a>
+        </nav>
+        <span class="footer__copy">© Business Architect 2026</span>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const burger = document.getElementById("burger");
+      const navLinks = document.querySelector(".nav__links");
+      if (burger && navLinks) {
+        burger.addEventListener("click", () =>
+          navLinks.classList.toggle("open"),
+        );
+      }
+
+      // Language sync with the main site (this page is Polish)
+      if (localStorage.getItem("ba_lang") === "en") {
+        window.location.replace("/complaints");
+      }
+      document.querySelectorAll(".lang__btn[data-lang]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          localStorage.setItem("ba_lang", btn.dataset.lang);
+        });
+      });
+
+      // Attachment filename hint
+      const attach = document.getElementById("attachment");
+      const attachLabel = attach && attach.closest(".cmp-attach");
+      if (attach) {
+        attach.addEventListener("change", () => {
+          const n = attach.files.length;
+          attachLabel.firstChild.textContent =
+            n > 0 ? `📎 Załączniki: ${n} ` : "📎 Dodaj załącznik ";
+        });
+      }
+
+      // Submit complaint to the backend (multipart — includes attachments)
+      const form = document.getElementById("complaintForm");
+      const statusEl = document.getElementById("cmpStatus");
+      const btn = document.getElementById("cmpSubmit");
+      const original = btn.textContent;
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        statusEl.className = "form__status";
+        statusEl.textContent = "";
+
+        const fd = new FormData();
+        fd.append("name", form.name.value);
+        fd.append("email", form.email.value);
+        fd.append("service", form.service.value);
+        fd.append("dueDate", form.dueDate.value);
+        fd.append("situation", form.situation.value);
+        fd.append("expected", form.expected.value);
+        if (attach && attach.files) {
+          for (const file of attach.files) fd.append("attachments", file);
+        }
+
+        btn.disabled = true;
+        btn.textContent = "Wysyłanie...";
+        try {
+          // No Content-Type header — the browser sets the multipart boundary.
+          const res = await fetch("/api/complaint?lang=pl", {
+            method: "POST",
+            body: fd,
+          });
+          const data = await res.json();
+          if (res.ok && data.ok) {
+            statusEl.className = "form__status ok";
+            statusEl.textContent = data.message;
+            form.reset();
+            if (attachLabel)
+              attachLabel.firstChild.textContent = "📎 Dodaj załącznik ";
+          } else {
+            statusEl.className = "form__status err";
+            statusEl.textContent = data.error || "Coś poszło nie tak.";
+          }
+        } catch {
+          statusEl.className = "form__status err";
+          statusEl.textContent = "Brak połączenia z serwerem.";
+        } finally {
+          btn.disabled = false;
+          btn.textContent = original;
+        }
+      });
+    </script>
+  </body>
+</html>

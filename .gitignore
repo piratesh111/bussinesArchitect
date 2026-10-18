@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Runtime data (leads, complaints, uploaded attachments) — not for the repo
+data/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment / secrets
+.env
+.env.*
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
