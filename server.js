@@ -20,6 +20,14 @@ app.use(express.static(join(__dirname, "public")));
 // --- File uploads (complaint attachments) ---
 // Ensure the uploads directory exists before multer writes to it.
 if (!existsSync(UPLOADS_DIR)) mkdirSync(UPLOADS_DIR, { recursive: true });
+import { mkdirSync } from 'fs';
+import { join } from 'path';
+
+const uploadDir = process.env.VERCEL
+  ? '/tmp/uploads'
+  : join(process.cwd(), 'data/uploads');
+
+mkdirSync(uploadDir, { recursive: true });
 
 const ALLOWED_EXT = new Set([
   ".pdf", ".doc", ".docx", ".xls", ".xlsx", ".csv",
