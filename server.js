@@ -4,7 +4,6 @@ import { dirname, join, extname } from "path";
 import { readFile, writeFile, mkdir } from "fs/promises";
 import { existsSync, mkdirSync } from "fs";
 import multer from "multer";
-import { mkdirSync } from 'fs';
 import { join } from 'path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
